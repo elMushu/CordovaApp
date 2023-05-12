@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background-color: #12142D;
+}
+
+.container {
+  display: grid;
+  gap: 1;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 25rem), 1fr);
+}
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #12142D;
+  overflow-x: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.sidebar ul {
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  width: 100%;
+  list-style: none;
+}
+
+.sidebar ul li:hover {
+  background: #fff;
+}
+
+.sidebar ul li:hover a {
+  color: #000000;
+}
+
+.sidebar ul li a {
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a i {
+  min-width: 60px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/*Title Home*/
+.title-home{
+    position: fixed;
+    background-color: #12142D;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    padding: 0 4rem;
+    height: 60px;    
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+/* main */
+.main {
+  position: absolute;
+  top: 5rem;
+  width: calc(100% - 260px);
+  min-height: calc(100vh - 300px);
+  background: #12142D;
+}
+
+.graph{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 10px;
+}
+
+/* charts */
+/*Estilo de gráficas Inicial with design*/
+/*
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.chart {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.chart h2 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #666;
+  text-align: center
+}
+*/
+
+/*
+@media (max-width:1115px) {
+  .sidebar {
+      width: 60px;
+  }
+  .main {
+      width: calc(100% - 60px);
+      left: 60px;
+  }
+}
+
+@media (max-width:880px) {
+  .fa-bell {
+      justify-self: left;
+  }
+  .cards {
+      width: 100%;
+      padding: 35px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+  }
+  .charts {
+      grid-template-columns: 1fr;
+  }
+}
+*/
+@media (max-width:500px) {
+  .sidebar {
+      width: 60px;
+  }
+  .main {
+      width: calc(100% - 60px);
+      left: 60px;
+  }
+}
